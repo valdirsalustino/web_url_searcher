@@ -55,6 +55,7 @@ It is an installation free software. You just need to have python and the requer
 An example with a given url:
 
 `python urlSearcher.py `
+
 Please past an url: `https://en.wikipedia.org/wiki/Cloudant`
 
 and the output shall show you the following steps relating to store the result into the Cloudant No SQL database, restore its result and find more urls within the initial stored urls.
