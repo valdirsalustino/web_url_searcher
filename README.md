@@ -1,6 +1,6 @@
 # Web URL searcher
 
-This application was suggested by the by IBM recruting team in order to avaliate the developer skills of candidates for software analyst. 
+This application was suggested by the by IBM recruting team in order to verify the developer skills of candidates for software analyst. 
 The strategy:
 The chosen languange is python because it have several powerfull libraries for web scraping and connection to Cloudant database.
 
