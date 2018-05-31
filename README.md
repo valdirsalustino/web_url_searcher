@@ -1,6 +1,6 @@
 # Web URL searcher
 
-This application was suggested by the by IBM recruting team in order to verify the developer skills of candidates for software analyst. 
+This application was suggested by the by IBM recruting team in order to evaluate the developer skills of candidates for software analyst. 
 The strategy:
 The chosen languange is python because it have several powerfull libraries for web scraping and connection to Cloudant database.
 
@@ -25,18 +25,18 @@ The challenge includes:
 ## Getting Started
 
 
-Just clone the the project at github: `git clone https://github.com/valdirsalustino/web_url_searcher.git` 
+* Just clone the the project at github: `git clone https://github.com/valdirsalustino/web_url_searcher.git` 
 
-Change the folder created `cd web_url_searcher`
+* Change to the folder just created `cd web_url_searcher`
 
-Run the code `python urlSearcher.py`
+* Run the code `python urlSearcher.py`
 
-As default the program scrape the url: www.google.com
-Please edit the variable `initial_url = "www.google.com"` to whateve url you want to scrape.
+As default the program scrape the url: www.google.com.
+Please edit the variable `initial_url = "www.google.com"` inside  the file `urlSearcher.py` to whatever url you want to scrape.
 There is an option which allows the user to past the url into the iterative command line. 
 However it fails to be iterative within a container in the IBM cloud, to my best knowledge.
 
-The package includes an unit test for every function used by the urlSearcher.py
+The package includes an unit test for every function used by the `urlSearcher.py`
 
 just run `python myunittest.py`
 
@@ -45,7 +45,7 @@ In the package there are the following files:
 * `Dockerfile`: contain the instruction to build the docker image. It uses the `requirements.txt` file;
 * `README.md`: the file you are reading now;
 * `myunittest.py`: the unit test build on top of the `unittest` package, more info <a href="https://docs.python.org/2/library/unittest.html">here</a>;
-* `requirements.txt`: the requirements file which docker uses to build their image. It just contain cloudant library requirement;
+* `requirements.txt`: the requirements file whose docker use to build their image. It just contain cloudant library requirement;
 * `urlSearcher.py`:  the file you use to run the scraper;
 * `urlscraping.py`:  the python module with functions used by the `urlSearcher.py`.
 
@@ -58,9 +58,9 @@ After download the source code you need to install the <a href="https://console.
 
 Example to run in the container at IBM cloud;
 ```
-docker tag urlsearcher registry.ng.bluemix.net/valdir_namespace/ibm_challenge_repo:urlsearcher_tag
+docker tag tag_urlsearcher registry.ng.bluemix.net/valdir_namespace/ibm_challenge_repo:tag_urlsearcher
 
-docker push registry.ng.bluemix.net/valdir_namespace/ibm_challenge_repo:urlsearcher_tag
+docker push registry.ng.bluemix.net/valdir_namespace/ibm_challenge_repo:tag_urlsearcher
 
 bx cr image-list
 
