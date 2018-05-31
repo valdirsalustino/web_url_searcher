@@ -1,11 +1,8 @@
 # Web URL searcher
 
-This application was suggested by the by IBM recruting team in order to avaliate the developer skills of candidates for software analytics. 
+This application was suggested by the by IBM recruting team in order to avaliate the developer skills of candidates for software analyst. 
 The strategy:
-The chosen languange is python because it have several powerfull libraries for web scraping.
-
-The unit tester is ..... 
-
+The chosen languange is python because it have several powerfull libraries for web scraping and connection to Cloudant database.
 
 The challenge includes:
 <ul> 
@@ -28,21 +25,41 @@ The challenge includes:
 ## Getting Started
 
 
-Just clone the the project with: git clone `https://github.com/valdirsalustino/web_url_searcher.git` 
+Just clone the the project at github: `git clone https://github.com/valdirsalustino/web_url_searcher.git` 
 
-Change the root directory to the created `web_url_searcher`: cd `web_url_searcher`
+Change the folder created `cd web_url_searcher`
 
+Run the code `python urlSearcher.py`
+
+As default the program scrape the url: www.google.com
+Please edit the variable `initial_url = "www.google.com"` to whateve url you want to scrape.
+There is an option which allows the user to past the url into the iterative command line. 
+However it fails to be iterative within a container in the IBM cloud, to my best knowledge.
+
+The package includes an unit test for every function used by the urlSearcher.py
+
+just run `python myunittest.py`
+
+In the package there are the following files:
+<ul> 
+    <li> `Dockerfile`: contain the instruction to build the docker image. It uses the `requirements.txt` file; </li>
+    <li> `README.md`: the file you are reading now;</li>
+    <li> `myunittest.py`: the unit test build on top of the `unittest` package, more info <a href="https://docs.python.org/2/library/unittest.html">here</a>;</li>
+    <li> `requirements.txt`: the requirements file which docker uses to build their image. It just contain cloudant library requirement;</li>
+    <li> `urlSearcher.py`:  the file you use to run the scraper;</li>
+    <li> `urlscraping.py`:  the python module with functions used by the `urlSearcher.py`.</li>
+</ul>
 
 ### Prerequisites
 
-This application was tested in my local machine with python 3.6.4
+This application is tested with python 3.6.4.
 
-After download the source code you need to install the <a href="https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started">IBM Cloud CLI </a> and the <a href="https://docs.docker.com/engine/installation/">Docker CLI</a>.
+After download the source code you need to install the <a href="https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started">IBM Cloud CLI </a> and the <a href="https://docs.docker.com/engine/installation/">Docker CLI</a>, in order to run the image on the container.
 
 ```
-Example:
+Example to run in the container image:
 
-python urlSearcher.py 
+
 ```
 The software will ask you for an url which you have to proved. For example: 
 Please past an url: '<https://your_url>'
