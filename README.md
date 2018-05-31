@@ -41,14 +41,14 @@ The package includes an unit test for every function used by the urlSearcher.py
 just run `python myunittest.py`
 
 In the package there are the following files:
-<ul> 
-    <li> `Dockerfile`: contain the instruction to build the docker image. It uses the `requirements.txt` file; </li>
-    <li> `README.md`: the file you are reading now;</li>
-    <li> `myunittest.py`: the unit test build on top of the `unittest` package, more info <a href="https://docs.python.org/2/library/unittest.html">here</a>;</li>
-    <li> `requirements.txt`: the requirements file which docker uses to build their image. It just contain cloudant library requirement;</li>
-    <li> `urlSearcher.py`:  the file you use to run the scraper;</li>
-    <li> `urlscraping.py`:  the python module with functions used by the `urlSearcher.py`.</li>
-</ul>
+
+* `Dockerfile`: contain the instruction to build the docker image. It uses the `requirements.txt` file;
+* `README.md`: the file you are reading now;
+* `myunittest.py`: the unit test build on top of the `unittest` package, more info <a href="https://docs.python.org/2/library/unittest.html">here</a>;
+* `requirements.txt`: the requirements file which docker uses to build their image. It just contain cloudant library requirement;
+* `urlSearcher.py`:  the file you use to run the scraper;
+* `urlscraping.py`:  the python module with functions used by the `urlSearcher.py`.
+
 
 ### Prerequisites
 
@@ -56,48 +56,30 @@ This application is tested with python 3.6.4.
 
 After download the source code you need to install the <a href="https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started">IBM Cloud CLI </a> and the <a href="https://docs.docker.com/engine/installation/">Docker CLI</a>, in order to run the image on the container.
 
+Example to run in the container at IBM cloud;
 ```
-Example to run in the container image:
+docker tag urlsearcher registry.ng.bluemix.net/valdir_namespace/ibm_challenge_repo:urlsearcher_tag
 
+docker push registry.ng.bluemix.net/valdir_namespace/ibm_challenge_repo:urlsearcher_tag
+
+bx cr image-list
+
+docker run registry.ng.bluemix.net/valdir_namespace/ibm_challenge_repo:tag_urlsearcher
 
 ```
-The software will ask you for an url which you have to proved. For example: 
-Please past an url: '<https://your_url>'
-
 ### Installing
 
 It is an installation free software. You just need to have python and the requered libraries.
 
 ## Running the tests
-An example with a given url:
+To run the unit test just type:
 
-`python urlSearcher.py `
-
-Please past an url: `https://en.wikipedia.org/wiki/Cloudant`
-
-and the output shall show you the following steps relating to store the result into the Cloudant No SQL database, restore its result and find more urls within the initial stored urls.
-
+`python myunittest.py`
 
 ### Break down into end to end tests
 
 #### Unit test
-As suggested, I perform the unit test using the <a href="https://docs.python.org/2/library/unittest.html">unittest — Unit testing frameworkh</a>
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+As suggested, I perform the unit test using the <a href="https://docs.python.org/2/library/unittest.html">unittest — Unit testing frameworkh</a>.
 
 ## Built With
 
@@ -107,19 +89,19 @@ Add additional notes about how to deploy this on a live system
 
 ## Contributing
 
-You are welcome to give suggestion about this application.
+You are welcome to make suggestions about this application.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+`https://github.com/valdirsalustino/web_url_searcher/tags`
 
 ## Authors
 
-* **Valdir Salustino Guimarães** - 
+* **Valdir Salustino Guimarães** 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - <a href="https://opensource.org/licenses/MIT">see MIT license.</a>
 
 ## Acknowledgments
 
